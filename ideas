@@ -1,0 +1,24 @@
+Ideas for number systems:
+
+-Can convert each number with at most p switches to a bunch of 1's and 0's, where there's a 1 if there's a switch and a 0 if not. Then, you equivalently allow numbers to have at most p 1's. It seems like this number system when interpreted naively to binary achieves better coverage (see rakedensity.py) than the version where you allow at most p switches?
+
+Ex: In this number system, 001111 -> 001000 -> 8
+						   011000 -> 010100 -> 20
+
+-Can encode numbers sequentially by always demanding that if x's leftmost switch is farther left than y's leftmost switch, then x > y.
+
+
+Ex: 
+p=2 In this number system, 000000 -> 0
+						   000001 -> 1
+						   000011 -> 2
+		                   000010 -> 3
+                           000111 -> 4
+                           000110 -> 5
+                           000100 -> 6
+                           001000 -> 7
+etc
+
+This number system is complete (no holes); I know how to do comparison and add-1, but normal addition seems hard and multiplication even harder
+
+-With t=6, p=2 (say), each character has about a 0.27 chance of being a switch and a 0.73 of not being a switch. This means that each character "contains" about 0.84 bits of information. Maybe we can make a number system where each new character, if it's a switch, eliminates 73% of the remaining search space, and if it's not, eliminates 27%? This isn't totally fleshed out, but maybe it can go somewhere
