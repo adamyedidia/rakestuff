@@ -16,7 +16,11 @@ p=2 In this number system, 000000 -> 0
                            000111 -> 4
                            000110 -> 5
                            000100 -> 6
-                           001000 -> 7
+                           001111 -> 7
+						   001110 -> 8
+						   001100 -> 9
+						   001000 -> 10
+                           011111 -> 11
 etc
 
 This number system is complete (no holes); I know how to do comparison and add-1, but normal addition seems hard and multiplication even harder
